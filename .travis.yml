@@ -10,6 +10,7 @@ script:
   - "bundle exec rake lint"
   - "bundle exec rake parallel_spec SPEC_OPTS='--format documentation --order random'"
 env:
+  - PUPPET_VERSION="~> 3.6.2"
   - PUPPET_VERSION="~> 3.8.0"
   - PUPPET_VERSION="~> 4.1.0"
   - PUPPET_VERSION="~> 4.2.0"
