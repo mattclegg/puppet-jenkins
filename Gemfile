@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
-gem 'rake', '>= 10.1.1'
+if RUBY_VERSION =~ /^1\.8/
+  rakeversion = "< 11"
+else
+  rakeversion = ">= 10.1.1"
+end
+
+gem 'rake', rakeversion
 gem 'rspec-its'
 gem 'puppet-lint', '>= 0.3.2'
 gem 'rspec-puppet', '~> 2.1.0'
@@ -29,7 +35,4 @@ group :system_tests do
   gem 'serverspec',    :require => false
   gem 'vagrant-wrapper',:require => false
   gem 'beaker-puppet_install_helper', :require => false
-  if RUBY_VERSION =~ /^1\.8/
-    gem 'rake', '< 11'
-  end
 end
