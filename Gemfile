@@ -29,4 +29,7 @@ group :system_tests do
   gem 'serverspec',    :require => false
   gem 'vagrant-wrapper',:require => false
   gem 'beaker-puppet_install_helper', :require => false
+  if RUBY_VERSION =~ /^1\.8/
+    gem 'rake', '< 11'
+  end
 end
