@@ -38,5 +38,6 @@ group :system_tests do
   if RUBY_VERSION =~ /^1\.8/
     gem 'addressable', '< 2.4'
     gem 'highline', '< 1.7.0'
+    gem 'parallel', '< 0.9.0'
   end
 end
