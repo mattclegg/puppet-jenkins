@@ -38,9 +38,10 @@ group :system_tests do
   gem 'vagrant-wrapper',:require => false
   gem 'beaker-puppet_install_helper', :require => false
   if RUBY_VERSION =~ /^1\.8/
-    gem 'addressable', '< 2.4'
-    gem 'highline', '< 1.7.0'
+    gem 'addressable', '<= 2.4'
+    gem 'highline', '<= 1.7.0'
     gem 'parallel', '< 1.3.4'
     gem 'rainbow', '< 2.0.0'
+    gem 'unicode-display_width', '<= 1.0.0'
   end
 end
