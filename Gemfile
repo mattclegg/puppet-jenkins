@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 if RUBY_VERSION =~ /^1\.8/
   rakeversion = "< 11"
   parallel_testsversion = "< 1.1.0"
+  rubocopversion = "<= 0.20.0"
 else
   rakeversion = ">= 10.1.1"
   parallel_testsversion = ">= 1.1.0"
+  rubocopversion = "~> 0.39"
 end
 
 gem 'rake', rakeversion
@@ -20,7 +22,7 @@ gem 'metadata-json-lint'
 gem 'retries', '~> 0.0.5'
 gem 'travis', '~> 1.8'
 gem 'parallel_tests', parallel_testsversion
-gem 'rubocop', '~> 0.39'
+gem 'rubocop', rubocopversion
 
 group :development do
   gem 'simplecov'
