@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 
 if RUBY_VERSION =~ /^1\.8/
   rakeversion = "< 11"
+  parallel_testsversion = "< 1.1.0"
 else
   rakeversion = ">= 10.1.1"
+  parallel_testsversion = ">= 1.1.0"
 end
 
 gem 'rake', rakeversion
@@ -17,7 +19,7 @@ gem 'puppet', ENV['PUPPET_VERSION'] || '~> 3.5'
 gem 'metadata-json-lint'
 gem 'retries', '~> 0.0.5'
 gem 'travis', '~> 1.8'
-gem 'parallel_tests'
+gem 'parallel_tests', parallel_testsversion
 gem 'rubocop', '~> 0.39'
 
 group :development do
@@ -39,6 +41,5 @@ group :system_tests do
     gem 'addressable', '< 2.4'
     gem 'highline', '< 1.7.0'
     gem 'parallel', '< 1.3.4'
-    gem 'parallel_tests', '< 1.1.0'
   end
 end
