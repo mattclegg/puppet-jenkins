@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby 'RUBY_VERSION', :engine => 'ENGINE', :engine_version => 'ENGINE_VERSION'
+ruby 'RUBY_VERSION'
 
 if RUBY_VERSION =~ /^1\.8/
   rakeversion = "< 11"
