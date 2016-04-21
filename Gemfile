@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 if RUBY_VERSION =~ /^1\.8/
   rakeversion = "< 11"
   parallel_testsversion = "< 1.1.0"
-  rubocopversion = "< 0.20"
+  rubocopversion = "< 0.19"
 else
   rakeversion = ">= 10.1.1"
   parallel_testsversion = ">= 1.1.0"
